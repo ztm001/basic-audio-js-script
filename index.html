@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Audio JS Script</title>
+</head>
+<body>
+	
+<div id="audiobox">
+	
+	<button id="play">Play</button>
+	<button id="pause">Pause</button>
+
+</div>
+
+
+
+	<script>
+
+		init();		//envoking function 
+
+
+		var createAudio = function(){   //creating audio object
+				window.newAudio = new Audio();
+				newAudio.src = 'frigia.mp3';
+		}();
+
+
+		function init(){	//setting click events to button elements
+				document.getElementById('play');
+				play.addEventListener('click', playAudio, false);
+
+
+				document.getElementById('pause');
+				pause.addEventListener('click', pauseAudio, false);
+		};
+
+
+
+		function playAudio(){	//play function with toggle 
+				
+				if (newAudio.paused) {
+						newAudio.play();
+				} else {
+					newAudio.pause();
+				}
+
+	
+		};
+
+		
+		function pauseAudio(){		//pause function
+				newAudio.pause();
+		};
+		
+
+
+	</script>
+
+
+
+
+</body>
+</html>
